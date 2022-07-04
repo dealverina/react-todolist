@@ -15,6 +15,7 @@ A simple program to keep a to-do list using ReactJs and Tailwind CSS.
 
 - Create to-do list
 - Read to-do list
+- Update to-do list
 - Delete to-do list
 - Change the order of the to-do list
 
@@ -23,7 +24,8 @@ A simple program to keep a to-do list using ReactJs and Tailwind CSS.
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Primary Button Color | ![#6366F1](https://via.placeholder.com/10/6366F1?text=+) #6366F1 |
-| Delete Button Color | ![#F43F5E](https://via.placeholder.com/10/F43F5E?text=+) #F43F5E |
+| Delete or Cancel Button Color | ![#F43F5E](https://via.placeholder.com/10/F43F5E?text=+) #F43F5E |
+| Save Button Color | ![#10B981](https://via.placeholder.com/10/10B981?text=+) #10B981 |
 
 ## Run Locally
 

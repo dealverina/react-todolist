@@ -17,16 +17,22 @@ function App() {
 		const newItems = items.filter((item) => item.id !== targetId);
 		setItems(newItems);
 	}
+
+	const saveItem = (targetId, value) => {
+		const index = items.findIndex(item => {return item.id === targetId})
+		const editItems = [...items];
+		editItems[index].title = value;
+		setItems(editItems)
+	}
 	
 	const swapItem = (firstItem, secondItem) => {
 		const newItems = items.map((item) =>
-		  item.id === firstItem.id
-			? secondItem
-			: item.id === secondItem.id
-			? firstItem
-			: item
+			item.id === firstItem.id
+				? secondItem
+					: item.id === secondItem.id
+						? firstItem
+						: item
 		);
-		console.log(newItems)
 		setItems(newItems);
 	}
 	
@@ -34,7 +40,7 @@ function App() {
 		<div className="container m-auto flex flex-col items-center">
 			<h1 className="text-3xl font-medium mt-10">Todo List</h1>
 			<Form onSubmit={addItem} />
-			<List items={items} onDelete={deleteItem} onSwap={swapItem} />
+			<List items={items} onDelete={deleteItem} onSave={saveItem} onSwap={swapItem} />
 		</div>
 	);
 }
