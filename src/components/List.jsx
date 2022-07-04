@@ -11,7 +11,7 @@ export const ListItem = ( props ) => {
     
 
     return (
-        <div className={`w-1/2 flex flex-row py-4 px-10 bg-slate-50 hover:bg-slate-200 hover:${isEdit ? 'cursor-pointer' : 'cursor-grab'} transition duration-300 rounded-md`} 
+        <div className={`2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full flex lg:flex-row flex-col py-4 px-10 bg-slate-50 hover:bg-slate-200 hover:${isEdit ? 'cursor-pointer' : 'cursor-grab'} transition duration-300 rounded-md`} 
             draggable={isEdit ? false : true} 
             onDragStart={props.onDragStart}
             onDrop={props.onDrop}
@@ -24,16 +24,16 @@ export const ListItem = ( props ) => {
                     }}>{props.title}</p>
                 </span>}
                 {isEdit ? 
-                <>
-                    <button className='button button-save h-10 mr-5' onClick={() => {
+                <div className='flex lg:flex-col sm:flex-row'>
+                    <button className='button button-save h-10 mr-5 mt-5 w-32 lg:mt-0 lg:w-auto' onClick={() => {
                         props.onSave(props.id, value)
                         setIsEdit(false)
                     }}>Save</button>
-                    <button className='button button-delete h-10' onClick={() => {
+                    <button className='button button-delete h-10 w-32 mt-5 lg:w-auto' onClick={() => {
                         setIsEdit(false)
                     }}>Cancel</button>
-                </> : 
-                <button className='button button-delete h-10' onClick={() => {
+                </div> : 
+                <button className='button button-delete h-10 mt-5 w-32 lg:mt-0 lg:w-auto' onClick={() => {
                     props.onDelete(props.id)
                 }}>Delete</button>}
                 
