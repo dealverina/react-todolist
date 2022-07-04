@@ -12,7 +12,7 @@ export const ListItem = ( props ) => {
 
     return (
         <div className={`w-1/2 flex flex-row py-4 px-10 bg-slate-50 hover:bg-slate-200 hover:${isEdit ? 'cursor-pointer' : 'cursor-grab'} transition duration-300 rounded-md`} 
-            draggable={isEdit && false} 
+            draggable={isEdit ? false : true} 
             onDragStart={props.onDragStart}
             onDrop={props.onDrop}
             onDragOver={(event) => event.preventDefault()}>
