@@ -1,3 +1,4 @@
+import { CreateButton } from 'components';
 import React, { useState } from 'react';
 
 const Form = ( props ) => {
@@ -16,7 +17,8 @@ const Form = ( props ) => {
     return (
         <div className='py-5 w-full flex flex-row justify-center mt-5'>
             <input type='text' className='input-primary mr-5 basis-1/2' placeholder="What will you do today?" onChange={handleChange} value={inputValue} />
-            <button className='button button-primary' disabled={isEmpty} onClick={handleSubmit}>Add</button>
+            {/* <button className='button button-primary' disabled={isEmpty} onClick={handleSubmit}>Add</button> */}
+            <CreateButton text="Add" onClick={handleSubmit} disabled={isEmpty} />
         </div>
     )
 }
